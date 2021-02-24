@@ -59,4 +59,4 @@ The original gif will always be saved and depending on the compression method(s)
 * add proxy support
 * provide multiple URLs on input
 
-Originally developer by [Glenn Goossens](https://github.com/glgoose/gif-scroll-animation)
+Originally developed by [Glenn Goossens](https://github.com/glgoose/gif-scroll-animation)
