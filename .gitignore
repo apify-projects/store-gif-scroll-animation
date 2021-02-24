@@ -1,0 +1,5 @@
+apify_storage
+node_modules
+.vscode/
+*.txt
+apify_storage
