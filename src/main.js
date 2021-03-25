@@ -27,7 +27,7 @@ Apify.main(async () => {
         cookieWindowSelector,
         frameRate,
         recordingTimeBeforeAction,
-        scrollDown,
+        scrollDown = true,
         scrollPercentage,
         clickSelector,
         recordingTimeAfterClick,
