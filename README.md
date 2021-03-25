@@ -23,6 +23,7 @@ Gif for scrolling down www.franshalsmuseum.nl:
 ### Storage
 The gif files are stored in the key-value store.  
 The original gif will always be saved and depending on the compression method(s) selected those will also be saved there.
+Links to the files are also stored to the dataset for clarity
 
 ## Input parameters
 | Field    | Type   | Required | Default | Description |
