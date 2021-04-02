@@ -102,7 +102,8 @@ Apify.main(async () => {
     gif.finish();
     const gifBuffer = await getGifBuffer(gif, chunks);
 
-    const siteName = url.match(/(\w+\.)?[\w-]+\.\w+/g);
+    const urlObj = new URL(url);
+    const siteName = urlObj.hostname;
     const baseFileName = `${siteName}-scroll`;
 
     // Save to dataset so there is higher chance the user will find it
