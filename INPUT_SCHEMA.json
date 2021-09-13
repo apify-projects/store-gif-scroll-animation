@@ -11,6 +11,15 @@
             "prefill": "https://apify.com/",
             "example": "https://apify.com/"
         },
+        "proxyOptions": {
+            "title": "Proxy configuration",
+            "type": "object",
+            "description": "Select proxies to be used by your actor.",
+            "prefill": {
+                "useApifyProxy": false
+            },
+            "editor": "proxy"
+        },
         "frameRate": {
             "title": "Frame rate",
             "type": "integer",
