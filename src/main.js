@@ -38,14 +38,7 @@ Apify.main(async () => {
 
     const proxyConfiguration = await Apify.createProxyConfiguration(proxyOptions);
 
-    let browser;
-    if (proxyConfiguration) {
-        const proxyUrl = proxyConfiguration.newUrl();
-        browser = await Apify.launchPuppeteer({ proxyUrl, launchOptions: { timeout: 90000 } });
-    } else {
-        browser = await Apify.launchPuppeteer({ launchOptions: { timeout: 90000 } });
-    }
-
+    const browser = await Apify.launchPuppeteer({ proxyUrl: proxyConfiguration?.newUrl(), launchOptions: { timeout: 90000 } });
     const page = await browser.newPage();
 
     log.info(`Setting page viewport to ${viewportWidth}x${viewportHeight}`);
