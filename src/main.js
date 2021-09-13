@@ -33,9 +33,19 @@ Apify.main(async () => {
         recordingTimeAfterClick,
         lossyCompression,
         loslessCompression,
+        proxyOptions,
     } = await Apify.getInput();
 
-    const browser = await Apify.launchPuppeteer({ launchOptions: { timeout: 90000 } });
+    const proxyConfiguration = await Apify.createProxyConfiguration(proxyOptions);
+
+    let browser;
+    if (proxyConfiguration) {
+        const proxyUrl = proxyConfiguration.newUrl();
+        browser = await Apify.launchPuppeteer({ proxyUrl, launchOptions: { timeout: 90000 } });
+    } else {
+        browser = await Apify.launchPuppeteer({ launchOptions: { timeout: 90000 } });
+    }
+
     const page = await browser.newPage();
 
     log.info(`Setting page viewport to ${viewportWidth}x${viewportHeight}`);
