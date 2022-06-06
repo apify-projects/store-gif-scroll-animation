@@ -51,8 +51,11 @@ Apify.main(async () => {
         slowDownAnimationsFn(page);
     }
 
-    log.info(`Opening page: ${url}`);
-    await page.goto(url, { waitUntil: 'networkidle2' });
+    // check in case if input url doesn't have 'https://' part
+    const validUrl = url.includes('http') ? url : `https://${url}`;
+
+    log.info(`Opening page: ${validUrl}`);
+    await page.goto(validUrl, { waitUntil: 'networkidle2' });
 
     if (waitToLoadPage) {
         await wait(waitToLoadPage);
@@ -105,7 +108,7 @@ Apify.main(async () => {
     gif.finish();
     const gifBuffer = await getGifBuffer(gif, chunks);
 
-    const urlObj = new URL(url);
+    const urlObj = new URL(validUrl);
     const siteName = urlObj.hostname;
     const baseFileName = `${siteName}-scroll`;
 
