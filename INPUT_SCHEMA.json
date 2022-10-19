@@ -8,8 +8,7 @@
             "type": "string",
             "description": "Website URL",
             "editor": "textfield",
-            "prefill": "https://apify.com/",
-            "example": "https://apify.com/"
+            "prefill": "https://apify.com/"
         },
         "proxyOptions": {
             "title": "Proxy configuration",
@@ -27,8 +26,7 @@
             "editor": "number",
             "unit": "fps",
             "prefill": 7,
-            "default": 7,
-            "example": 7
+            "default": 7
         },
         "scrollDown": {
             "title": "Scroll down",
@@ -43,7 +41,7 @@
             "editor": "number",
             "unit": "%",
             "default": 10,
-            "example": 10
+            "prefill": 10
         },
         "recordingTimeBeforeAction": {
             "title": "Capture before action",
@@ -51,9 +49,8 @@
             "description": "Amount of time to capture the screen before doing any action like scrolling down or clicking.",
             "editor": "number",
             "unit": "ms",
-            "prefill": 1500,
-            "default": 1500,
-            "example": 1500
+            "prefill": 1000,
+            "default": 1000
         },
         "clickSelector": {
             "title": "Click selector",
