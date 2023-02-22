@@ -8,14 +8,14 @@
             "type": "string",
             "description": "Website URL",
             "editor": "textfield",
-            "prefill": "https://apify.com/"
+            "prefill": "https://crawlee.dev/"
         },
         "proxyOptions": {
             "title": "Proxy configuration",
             "type": "object",
             "description": "Select proxies to be used by your actor.",
             "prefill": {
-                "useApifyProxy": false
+                "useApifyProxy": true
             },
             "editor": "proxy"
         },
@@ -124,6 +124,6 @@
         }
     },
     "required": [
-        "url"
+        "url", "proxyOptions"
     ]
 }
