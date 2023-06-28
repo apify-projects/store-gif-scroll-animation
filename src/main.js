@@ -43,15 +43,22 @@ Actor.main(async () => {
     // We do just single request but wrap in crawler for error retries
     const crawler = new PuppeteerCrawler({
         proxyConfiguration,
+        browserPoolOptions: {
+            // We don't want to have randomly overridden browser appearance
+            useFingerprints: false,
+        },
+        launchContext: {
+            launchOptions: {
+                defaultViewport: {
+                    width: viewportWidth,
+                    height: viewportHeight,
+                },
+            },
+        },
         requestHandlerTimeoutSecs: 300,
         navigationTimeoutSecs: 90,
         preNavigationHooks: [
             async ({ page }, gotoOptions) => {
-                await page.setViewport({
-                    width: viewportWidth,
-                    height: viewportHeight,
-                });
-
                 if (slowDownAnimations) {
                     slowDownAnimationsFn(page);
                 }
