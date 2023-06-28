@@ -1,9 +1,11 @@
 {
 	"name": "gif-scroll-animation",
 	"version": "0.0.1",
+    "type": "module",
 	"description": "Record a page scroll or click and turn it into an animated gif.",
 	"dependencies": {
-		"apify": "^2.0.6",
+		"apify": "^3.1.7",
+        "crawlee": "^3.4.0",
 		"puppeteer": "*",
 		"gif-encoder": "^0.7.2",
 		"imagemin": "^7.0.0",

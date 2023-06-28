@@ -1,5 +1,6 @@
-apify_storage
+.DS_Store
+.idea
+dist
 node_modules
-.vscode/
-*.txt
 apify_storage
+storage
