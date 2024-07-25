@@ -17,6 +17,9 @@ There are several settings you can change if you want to change the frame rate, 
 
 ## Tutorial
 Here's a [quick step-by-step guide](https://blog.apify.com/how-to-make-a-scrolling-gif-of-a-web-page/) to teach you how to make an animated scrolling GIF of any web page using GIF Scroll Animation. There's also a one-second history of the GIF and some awesome reaction GIFs to blow your mind...
+Or you can watch our [video tutorial](https://www.youtube.com/watch?v=Rb_tI1xyOC0) on GIF Scroll Animation
+
+https://www.youtube.com/watch?v=Rb_tI1xyOC0
 
 ## Output
 ### Example
