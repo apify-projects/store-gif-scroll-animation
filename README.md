@@ -25,7 +25,10 @@ https://www.youtube.com/watch?v=Rb_tI1xyOC0
 ### Example
 Scrolling GIF for www.franshalsmuseum.nl:  
 
-![Frans Hals Museam gif](./src/gif-examples/www.franshalsmuseum.nl-scroll_lossy-comp.gif)
+<a href="https://blog.apify.com/how-to-make-a-scrolling-gif-of-a-web-page/" target="_blank">
+  <img src="./src/gif-examples/www.franshalsmuseum.nl-scroll_lossy-comp.gif" alt="Frans Hals Museum GIF" style="width: 80%;">
+</a>
+
 
 ### Storage
 The GIF files are stored in the Apify key-value store. The original GIF will always be saved. Additional GIFs might also be stored if you customize the compression method. You can also find links to the GIFs in the Dataset.
