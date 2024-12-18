@@ -66,13 +66,14 @@ Actor.main(async () => {
                 gotoOptions.waitUntil = 'networkidle2';
             },
         ],
-        requestHandler: async ({ page }) => {
+        requestHandler: async ({ page, closeCookieModals }) => {
             await Actor.setStatusMessage('Page loaded, starting gif recording');
             log.info(`Setting page viewport to ${viewportWidth}x${viewportHeight}`);
-
+            
             if (waitToLoadPage) {
                 await wait(waitToLoadPage);
             }
+            await closeCookieModals();
 
             // remove cookie window if specified
             if (cookieWindowSelector) {

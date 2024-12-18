@@ -5,7 +5,7 @@
 	"description": "Record a page scroll or click and turn it into an animated gif.",
 	"dependencies": {
 		"apify": "^3.1.7",
-        "crawlee": "^3.4.0",
+        "crawlee": "^3.12.1",
 		"puppeteer": "*",
 		"gif-encoder": "^0.7.2",
 		"imagemin": "^7.0.0",

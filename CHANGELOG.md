@@ -1,3 +1,7 @@
+### 2024-12-18 (0.0.27)
+*Features*
+- Attempt to close cookie modals using I Don't Care About Cookies browser extension. In some cases this is not enough and `cookieWindowSelector` input is required.
+
 ### 2023-06-28 (0.0.26)
 *Fixes*
 - Use the latest Chrome version for better stability
